@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Welcome To MySmartWorker"
+        android:textSize="20sp"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Create Profile"
+        android:textSize="20sp"
+        android:id="@+id/CreateProfile"
+        android:layout_centerInParent="true"/>
+
+    <Button
+        android:id="@+id/ViewProfile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="View and Edit Profile"
+        android:layout_below="@id/CreateProfile"
+        android:layout_centerInParent="true"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="View Jobs"
+        android:textSize="20sp"
+        android:id="@+id/ViewJobs"
+        android:layout_below="@id/ViewProfile"
+        android:layout_centerInParent="true"/>
+
+
+</RelativeLayout>

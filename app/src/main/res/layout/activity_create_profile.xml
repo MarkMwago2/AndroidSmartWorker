@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CreateProfileActivity">
+
+    <TextView
+        android:id="@+id/Prof"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Create Your Profile Here"
+        android:textSize="40sp"/>
+
+    <EditText
+        android:id="@+id/firstname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/Prof"
+        android:hint="First Name"
+        android:inputType="text" />
+
+    <EditText
+        android:id="@+id/lastname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/firstname"
+        android:hint="Last Name"
+        android:inputType="text" />
+
+    <EditText
+        android:id="@+id/IDnumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/lastname"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:hint="ID Number"
+        android:inputType="number" />
+
+    <EditText
+        android:id="@+id/contactemail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/IDnumber"
+        android:hint="Email"
+        android:inputType="textEmailAddress" />
+
+    <EditText
+        android:id="@+id/phonenumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/contactemail"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:hint="Phone Number"
+        android:inputType="phone"/>
+
+    <EditText
+        android:id="@+id/DOB"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/phonenumber"
+        android:layout_alignParentLeft="true"
+        android:hint="Date of Birth"
+        android:inputType="date"/>
+
+    <EditText
+        android:id="@+id/Education"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/DOB"
+        android:layout_alignParentLeft="true"
+        android:hint="Highest level of Education"
+        android:inputType="text"/>
+
+    <EditText
+        android:id="@+id/Qualification"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/DOB"
+        android:layout_alignParentLeft="true"
+        android:hint="Professional Qualifications"
+        android:inputType="text"/>
+
+    <Button
+        android:id="@+id/CreateProfile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Submit and Save Profile"
+        android:layout_below="@id/Qualification"
+        android:layout_centerInParent="true"/>
+
+    <Button
+        android:id="@+id/ViewProfile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="View and Edit Profile"
+        android:layout_below="@id/CreateProfile"
+        android:layout_centerInParent="true"/>
+
+
+
+</RelativeLayout>
