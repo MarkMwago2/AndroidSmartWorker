@@ -1,4 +1,4 @@
-package com.example.smartworker;
+package com.example.smartworker.ui;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -9,7 +9,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
-import butterknife.BindView;
+import com.example.smartworker.R;
 
 public class LoginActivity extends AppCompatActivity{
     private Button mPasswordLoginButton;
