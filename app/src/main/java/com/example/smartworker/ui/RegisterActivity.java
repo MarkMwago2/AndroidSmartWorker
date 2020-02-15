@@ -12,6 +12,7 @@ import android.widget.Toast;
 
 import com.example.smartworker.R;
 import com.example.smartworker.network.RetrofitClient;
+import com.example.smartworker.network.SmartworkerAPI;
 
 import java.io.IOException;
 
@@ -29,6 +30,7 @@ public class RegisterActivity extends AppCompatActivity {
     private EditText mconfirmPasswordEditText;
     private Button mcreateUserButton;
     private TextView mloginTextView;
+    private SmartworkerAPI smartworkerAPI;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,28 +44,33 @@ public class RegisterActivity extends AppCompatActivity {
         mcreateUserButton =  (Button) findViewById(R.id.createUserButton);
         mloginTextView = (TextView) findViewById(R.id.loginTextView);
 
-        Call<ResponseBody> call = getInstance()
-                .getSmartWorkerAPI()
-                .registerUser();
+        smartworkerAPI = RetrofitClient.retrofitClient().create(SmartworkerAPI.class);
+        Call<ResponseBody> call = smartworkerAPI.registerUser()
 
-        call.enqueue(new Callback<ResponseBody>() {
-            @Override
-            public void onResponse(Call<ResponseBody> call, Response<ResponseBody> response) {
-                try {
-                    String s = response.body().string();
-                    Toast.makeText(RegisterActivity.this, s, Toast.LENGTH_LONG).show();
-                }catch (IOException e) {
-                    e.printStackTrace();
-                }
 
-            }
 
-            @Override
-            public void onFailure(Call<ResponseBody> call, Throwable t) {
-                Toast.makeText(RegisterActivity.this, t.getMessage(), Toast.LENGTH_LONG).show();
+//        Call<ResponseBody> call = getInstance()
+//                .getSmartWorkerAPI()
+//                .registerUser();
 
-            }
-        });
+//        call.enqueue(new Callback<ResponseBody>() {
+//            @Override
+//            public void onResponse(Call<ResponseBody> call, Response<ResponseBody> response) {
+//                try {
+//                    String s = response.body().string();
+//                    Toast.makeText(RegisterActivity.this, s, Toast.LENGTH_LONG).show();
+//                }catch (IOException e) {
+//                    e.printStackTrace();
+//                }
+//
+//            }
+//
+//            @Override
+//            public void onFailure(Call<ResponseBody> call, Throwable t) {
+//                Toast.makeText(RegisterActivity.this, t.getMessage(), Toast.LENGTH_LONG).show();
+//
+//            }
+//        });
 
 
         mcreateUserButton.setOnClickListener(new View.OnClickListener() {
